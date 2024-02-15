@@ -18,6 +18,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping(value = "/profissional", produces = {"application/json"})
 public class ProfissionalController {
     @Autowired
@@ -72,3 +73,4 @@ public class ProfissionalController {
         return ResponseEntity.status(HttpStatus.OK).body("Profissional deletado com sucesso!");
     }
 }
+

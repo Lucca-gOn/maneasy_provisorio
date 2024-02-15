@@ -19,6 +19,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping(value = "/squads", produces = {"application/json"})
 public class SquadController {
 
@@ -73,5 +74,5 @@ public class SquadController {
         squadRepository.delete(squadBuscado.get());
         return ResponseEntity.status(HttpStatus.OK).body("Squad deletado com sucesso!");
     }
-    
+
 }
